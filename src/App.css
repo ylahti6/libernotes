@@ -1,43 +1,54 @@
 .App {
   text-align: center;
   display: flex;
-  min-height: 100vh;
-  align-items: center;
+  min-height: auto;
   justify-content: center;
   color: white;
-  border-radius: 2.5px;
+  width: auto;
+  
+}
+
+.swingback {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.swingback:hover {
+  color: lightslategray;
 }
 
 .auth-form-container, .login-form, .register-form {
   display: flex;
   flex-direction: column;
+  padding: 5vmin 0;
+ 
 }
 
 .auth-form-container {
-  padding: 5rem;
-  border: 1px solid white;
-  border-radius: 5px;
+  max-width: auto;
+  margin: 10vmin 0;
 }
 
 label {
   text-align: left;
-  padding: 0.25rem 0;
 }
 
 input {
-  margin: 0.5rem 0;
+  margin: 0.25rem 0 0.75rem 0;
   border: none;
-  padding: 0.5rem;
+  padding: 0.65rem;
   border-radius: 3px;
 }
 
 button {
   border: none;
   background-color: #FDF5F2;
-  padding: 0.5rem;
-  border-radius: 3px;
+  padding: 0.65rem;
+  border-radius: 3px;  
   cursor: pointer;
-
 }
 
 .strawberry-button {
@@ -55,4 +66,5 @@ button {
 
 .link-btn:hover {
   background-color: none;
+  color: lightslategray;
 }
