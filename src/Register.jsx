@@ -18,9 +18,10 @@ export const Register = (props) => {
         <label>Name</label>
         <input
           value={name}
+          onChange={(e) => setName(e.target.value)}
           name="name"
           id="name"
-          placeholder="Enter your name"
+          placeholder="Name"
         />
 
         <label htmlFor="email">Email</label>
@@ -40,12 +41,11 @@ export const Register = (props) => {
           placeholder="Password"
           id="password"
         />
-
+        <button className="strawberry-button" type="submit">
+          Register
+        </button>
       </form>
-      <button
-        className="link-btn"
-        onClick={() => props.onFormSwitch("login")}
-      >
+      <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
         Already have an account? click here
       </button>
     </div>

@@ -32,7 +32,7 @@ export const Login = (props) => {
           id="password"
         />
 
-        <button className="" type="submit">
+        <button className="strawberry-button" type="submit">
           Log In
         </button>
       </form>

@@ -17,7 +17,7 @@
 }
 
 .swingback:hover {
-  color: lightslategray;
+  color: #545c6d;
 }
 
 .auth-form-container, .login-form, .register-form {
@@ -28,18 +28,20 @@
 }
 
 .auth-form-container {
-  max-width: auto;
+  max-width: 325px;
+  width: 100%;
   margin: 10vmin 0;
 }
 
 label {
   text-align: left;
+  color: #545c6d;
 }
 
 input {
   margin: 0.25rem 0 0.75rem 0;
   border: none;
-  padding: 0.65rem;
+  padding: 0.75rem;
   border-radius: 3px;
 }
 

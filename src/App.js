@@ -13,10 +13,9 @@ function App() {
 
   return (
     <div className="App">
-      <a href="#" className="swingback">
-        Libernote
-      </a>
-      
+        <a href="#" className="swingback">
+          Libernote
+        </a>
       {currentForm === "login" ? (
         <Login onFormSwitch={toggleForm} />
       ) : (
