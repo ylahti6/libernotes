@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { AiTwotonePushpin } from 'react-icons/ai';
 
-import "./App.css";
+// ! Style sheets
+import "./styles/App.css";
+import "./styles/index.css";
+import "./styles/var.css";
 
 
 function MainApp() {

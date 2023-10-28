@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
-import "./styles/App.css";
-import "./styles/index.css";
-import "./styles/var.css";
 import { Login } from "./Login";
 import { Register } from "./Register";
 import MainApp from "./MainApp"; // Import the new page component
+
+// ! Style sheets
+import "./styles/App.css";
+import "./styles/index.css";
+import "./styles/var.css";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("login");
