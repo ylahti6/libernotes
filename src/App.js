@@ -14,9 +14,11 @@ function App() {
 
   return (
     <div className="App">
-      <a className="swingback" onClick={() => handlePageChange("mainapp")}>
-        Libernote
-      </a>
+      <div className="main-app-header">
+        <a className="swingback" onClick={() => handlePageChange("mainapp")}>
+          Libernote
+        </a>
+      </div>
 
       {/* Render the content based on the current page */}
       {currentPage === "login" ? (

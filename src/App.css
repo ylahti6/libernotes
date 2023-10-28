@@ -5,7 +5,13 @@
   justify-content: center;
   color: white;
   width: auto;
-  
+}
+
+.main-app-header {
+  border-bottom: 1px solid grey;
+  width: 100%;
+  height: 62.5px;
+  position: absolute;
 }
 
 .swingback {
@@ -16,8 +22,15 @@
   left: 1rem;
 }
 
-.swingback:hover {
+.quest-users {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+a:hover {
   color: #545c6d;
+  cursor:pointer;
 }
 
 .auth-form-container, .login-form, .register-form {
@@ -71,11 +84,52 @@ button {
   color: lightslategray;
 }
 
-.main-note {
+.MainApp {
+  overflow: hidden;
+}
+
+textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: auto;
+}
+
+.note-slip {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* background-color: rebeccapurple; */
+  height: calc(30vh - 25vh / 2);
+  /* position: fixed; */
+}
+
+.slip {
+  border-radius: 3px;
+  width: 60vmin;
   resize: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.note-board {
+  background-color: red;
+  height: auto;
+  width: auto;
+  padding: 10vmin;
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 1rem;
+}
+
+.box {
+  min-height: auto;
+  height: 100px;
+  min-width: fit-content;
+
+  background-color: yellow;
 }

@@ -1,16 +1,32 @@
 import React, { useState } from "react";
+import { AiTwotonePushpin } from 'react-icons/ai';
+
 import "./App.css";
 
 
 function MainApp() {
   return (
     <div className="MainApp">
-      <textarea 
-        placeholder="Take a note..."
-        
-        className="main-note"
-      >
+
+      <div className="note-slip">
+        <textarea placeholder="Take a note..." className="slip">
         </textarea>
+      </div>
+
+      <div className="note-board">
+        <div className="box">the quick brown fox jumped over the lazy dog</div>
+        <div className="box">the quick brown fox jumped over the lazy dog, the quick brown fox jumped over the lazy dog, the quick brown fox jumped over the lazy dog</div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+      </div>
     </div>
   );
 }

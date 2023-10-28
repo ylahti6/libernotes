@@ -10,6 +10,12 @@ export const Register = (props) => {
     console.log(email);
   };
 
+  const [currentPage, setCurrentPage] = useState("login");
+
+  const handlePageChange = (pageName) => {
+    setCurrentPage(pageName);
+  };
+
   return (
     <div className="auth-form-container">
       <h1>Register</h1>
@@ -48,6 +54,10 @@ export const Register = (props) => {
       <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
         Already have an account?
       </button>
+
+      {/* Continue as a quest link */}
+      
     </div>
+    
   );
 };
