@@ -70,3 +70,12 @@ button {
   background-color: none;
   color: lightslategray;
 }
+
+.main-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  resize: none;
+}

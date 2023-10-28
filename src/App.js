@@ -3,24 +3,29 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Login } from "./Login";
 import { Register } from "./Register";
+import MainApp from "./MainApp"; // Import the new page component
 
 function App() {
-  const [currentForm, setCurrentForm] = useState("login");
+  const [currentPage, setCurrentPage] = useState("login");
 
-  const toggleForm = (forName) => {
-    setCurrentForm(forName);
+  const handlePageChange = (pageName) => {
+    setCurrentPage(pageName);
   };
 
   return (
     <div className="App">
-        <a href="#" className="swingback">
-          Libernote
-        </a>
-      {currentForm === "login" ? (
-        <Login onFormSwitch={toggleForm} />
-      ) : (
-        <Register onFormSwitch={toggleForm} />
-      )}
+      <a className="swingback" onClick={() => handlePageChange("mainapp")}>
+        Libernote
+      </a>
+
+      {/* Render the content based on the current page */}
+      {currentPage === "login" ? (
+        <Login onFormSwitch={() => handlePageChange("register")} />
+      ) : currentPage === "register" ? (
+        <Register onFormSwitch={() => handlePageChange("login")} />
+      ) : currentPage === "mainapp" ? (
+        <MainApp />
+      ) : null}
     </div>
   );
 }
