@@ -1,34 +1,46 @@
 import React, { useState } from "react";
-import { AiTwotonePushpin } from 'react-icons/ai';
-
-// ! Style sheets
-import "./styles/App.css";
-import "./styles/index.css";
-import "./styles/var.css";
-
+import { AiFillPushpin } from 'react-icons/ai';
 
 function MainApp() {
+  const [inputText, setInputText] = useState(""); // State to store the input text
+  const [createdDivs, setCreatedDivs] = useState([]); // State to store the created divs
+
+  const handleInputChange = (event) => {
+    setInputText(event.target.value); // Update the inputText state
+  };
+
+  const moveText = () => {
+    if (inputText.trim()) {
+      // Create a new div and add it to the list of created divs
+      setCreatedDivs([...createdDivs, inputText.trim()]);
+      setInputText(""); // Clear the input field
+    }
+  };
+
   return (
     <div className="MainApp">
-
       <div className="note-slip">
-        <textarea placeholder="Take a note..." className="slip">
-        </textarea>
+
+        {/* Type in area */}
+        <textarea
+          id="inputText"
+          placeholder="Enter text..."
+          value={inputText}
+          onChange={handleInputChange}
+        ></textarea>
+        
+        {/* Button to press to export text */}
+        <button className="outputPin" onClick={moveText}>
+          <AiFillPushpin className="test" />
+          </button>
       </div>
 
-      <div className="note-board">
-        <div className="box">the quick brown fox jumped over the lazy dog</div>
-        <div className="box">the quick brown fox jumped over the lazy dog, the quick brown fox jumped over the lazy dog, the quick brown fox jumped over the lazy dog</div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
+      <div id="outputDiv">
+        {createdDivs.map((text, index) => (
+          <div key={index} className="created-div">
+            {text}
+          </div>
+        ))}
       </div>
     </div>
   );
