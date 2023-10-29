@@ -120,12 +120,10 @@ a:hover {
 }
 
 #outputDiv {
-  background-color: red;
   height: auto;
-  max-width: 80%;
+  max-width: 80vmin;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 1rem;
   color: var(--dark-app-blue);
 }
@@ -134,14 +132,14 @@ a:hover {
   padding: 1rem;
   border-radius: 3px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: left;
-  height: auto;
-  max-width: 12rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 21rem;
 }
 #outputDiv .created-div:hover {
-  background-color: grey;
+  background-color: var(--grey);
+  color: white;
 }
 #outputDiv #outputDiv::first-letter {
   text-transform: capitalize;
