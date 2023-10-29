@@ -8,11 +8,6 @@ export const Login = (props) => {
     e.preventDefault();
     console.log(email);
   };
-  const [currentPage, setCurrentPage] = useState("login");
-
-  const handlePageChange = (pageName) => {
-    setCurrentPage(pageName);
-  };
 
   return (
     <div className="auth-form-container">
@@ -41,18 +36,15 @@ export const Login = (props) => {
           Log In
         </button>
       </form>
-      
-      <button
-        className="link-btn"
-        onClick={() => props.onFormSwitch("register")}
-      >
+
+      <button className="link-btn" onClick={() => props.onFormSwitch("register")}>
         Don't have an account?
       </button>
 
-      {/* Continue as a quest link */}
-      <a className="quest-users" onClick={() => handlePageChange("mainapp")}>
-        Continue as a quest
-      </a>
+      <button className="link-btn" onClick={() => props.handlePageChange("mainapp")}>
+        Continue as a guest
+      </button>
     </div>
+
   );
 };

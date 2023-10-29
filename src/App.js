@@ -3,9 +3,10 @@ import logo from "./logo.svg";
 import { Login } from "./Login";
 import { Register } from "./Register";
 import MainApp from "./MainApp"; // Import the new page component
+import { SiScrollreveal } from 'react-icons/si';
 
 // ! Style sheets
-import "./styles/App.css";
+import "./styles/Global/App.css";
 import "./styles/index.css";
 import "./styles/var.css";
 
@@ -18,9 +19,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="main-app-header">
+      <div className="App-header">
+      
         <a className="swingback" onClick={() => handlePageChange("mainapp")}>
-          Libernote
+        <SiScrollreveal className="icon"/>Libernotes
         </a>
       </div>
 

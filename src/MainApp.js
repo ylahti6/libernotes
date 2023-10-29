@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { AiFillPushpin } from 'react-icons/ai';
+import { RiPushpin2Line } from 'react-icons/ri';
+
+// ! Style sheets
+import "./styles/Global/App.css";
+import "./styles/index.css";
+import "./styles/var.css";
 
 function MainApp() {
   const [inputText, setInputText] = useState(""); // State to store the input text
@@ -7,6 +12,11 @@ function MainApp() {
 
   const handleInputChange = (event) => {
     setInputText(event.target.value); // Update the inputText state
+  };
+
+  const autoResize = (textarea) => {
+    textarea.style.height = "auto"; // Reset the height to auto to calculate the new height based on content
+    textarea.style.height = textarea.scrollHeight + "px"; // Set the height to match the content's scroll height
   };
 
   const moveText = () => {
@@ -18,23 +28,20 @@ function MainApp() {
   };
 
   return (
-    <div className="MainApp">
-      <div className="note-slip">
-
-        {/* Type in area */}
+    <div className="App">
+      <div className="App-header-content">
         <textarea
           id="inputText"
-          placeholder="Enter text..."
+          placeholder="Take a note..."
           value={inputText}
           onChange={handleInputChange}
+          onInput={(e) => autoResize(e.target)} // Call autoResize on input
         ></textarea>
-        
-        {/* Button to press to export text */}
         <button className="outputPin" onClick={moveText}>
-          <AiFillPushpin className="test" />
-          </button>
+          <RiPushpin2Line />
+        </button>
       </div>
-
+      
       <div id="outputDiv">
         {createdDivs.map((text, index) => (
           <div key={index} className="created-div">

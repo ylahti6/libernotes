@@ -1,0 +1,171 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: auto;
+  color: white;
+  width: auto;
+}
+
+.icon {
+  background-color: none;
+  height: auto;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+
+.App-header {
+  width: 100%;
+  height: 4rem;
+  background-color: var(--matte-navy);
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  
+  .icon {
+   margin: 0 0 -1px 1rem;
+  }
+
+  a.swingback {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  a.swingback:hover {
+    color: var(--dark-app-blue);
+  }
+}
+
+a:hover {
+  color: var(--dark-app-blue);
+  cursor: pointer;
+}
+
+.auth-form-container,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  padding: 5vmin 0;
+}
+
+.auth-form-container {
+  max-width: 325px;
+  width: 100%;
+  margin: 10vmin 0;
+  
+  button {
+    border: none;
+    background-color: #fdf5f2;
+    padding: 0.65rem;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  label {
+    text-align: left;
+    color: var(--grey-smoke);
+  }
+  
+  input {
+    margin: 0.25rem 0 0.75rem 0;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 3px;
+  }
+  
+  .link-btn {
+    background: none;
+    color: white;
+  }
+  
+  .link-btn:hover {
+    background-color: none;
+    color: var(--link-hover);
+  }
+}
+
+
+
+.App-header-content {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: calc(100% + 4rem);
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin: 5rem 0;
+  align-items: center;
+
+    #inputText {
+      border-radius: 6px;
+      width: 60vmin;
+      height: 100%;
+      resize: none;
+      border: none;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    }
+
+    textarea {
+      font-size: 1rem;
+      color: var(--dark-app-blue);
+      outline: none;
+    }
+
+    .outputPin {
+      background: none;
+      margin: 1rem;
+      font-size: 1.5rem;
+      color: var(--grey);
+      border: none;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+    }
+    
+    .outputPin:hover {
+      border-radius: 100%;
+      background-color: var(--light-grey);
+      color: var(--dark-app-blue);
+    }
+}
+
+#outputDiv {
+  background-color: red;
+  height: auto;
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  color: var(--dark-app-blue);
+
+.created-div {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: left;
+  height: auto;
+  max-width: calc(10rem + 2rem);
+}
+
+.created-div:hover {
+  background-color: grey;
+}
+
+#outputDiv::first-letter {
+  text-transform: capitalize;
+}
+}
+
+

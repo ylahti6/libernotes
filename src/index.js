@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 
 // ! Style sheets
-import "./styles/App.css";
+import "./styles/Global/App.css";
 import "./styles/index.css";
 import "./styles/var.css";
 

@@ -1,7 +1,16 @@
 :root {
-    --grey-smoke: #AEAEAE;
-    --matte-navy: #364354;
-    --midnight: #282c34;
-    --dawn-blue: #778899;
     
+    --matte-navy: #364354;
+    /* --matte-navy: #949DA9; */
+    --highlight-matte-navy: #536175;
+    
+    /* --light-app-blue: #778899; */
+
+    /* Original */
+    /* !Main colour scheme  */
+    --app-blue: #2A3441;
+    --dark-app-blue: #282c34;
+    --light-app-blue: #445469;
+    --grey: #AEAEAE;
+    --light-grey: #aeaeae50;
 }
