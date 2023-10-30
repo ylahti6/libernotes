@@ -16,7 +16,6 @@
   padding: 0.5rem;
 }
 
-
 .App-header {
   width: 100%;
   height: 4rem;
@@ -24,9 +23,9 @@
   display: flex;
   align-items: center;
   font-size: 1.5rem;
-  
+
   .icon {
-   margin: 0 0 -1px 1rem;
+    margin: 0 0 -1px 1rem;
   }
 
   a.swingback {
@@ -58,7 +57,7 @@ a:hover {
   max-width: 325px;
   width: 100%;
   margin: 10vmin 0;
-  
+
   button {
     border: none;
     background-color: #fdf5f2;
@@ -71,26 +70,24 @@ a:hover {
     text-align: left;
     color: var(--grey-smoke);
   }
-  
+
   input {
     margin: 0.25rem 0 0.75rem 0;
     border: none;
     padding: 0.75rem;
     border-radius: 3px;
   }
-  
+
   .link-btn {
     background: none;
     color: white;
   }
-  
+
   .link-btn:hover {
     background-color: none;
     color: var(--link-hover);
   }
 }
-
-
 
 .App-header-content {
   padding: 1rem;
@@ -102,67 +99,94 @@ a:hover {
   margin: 5rem 0;
   align-items: center;
 
-    #inputText {
-      border-radius: 6px;
-      width: 60vmin;
-      height: 100%;
-      resize: none;
-      border: none;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    }
+  #inputText {
+    border-radius: 6px;
+    width: 60vmin;
+    height: 100%;
+    resize: none;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+  }
 
-    textarea {
-      font-size: 1rem;
-      color: var(--dark-app-blue);
-      outline: none;
-    }
+  textarea {
+    font-size: 1rem;
+    color: var(--dark-app-blue);
+    outline: none;
+  }
 
-    .outputPin {
-      background: none;
-      margin: 1rem;
-      font-size: 1.5rem;
-      color: var(--grey);
-      border: none;
-      padding: 0.25rem 0.5rem;
-      cursor: pointer;
-    }
-    
-    .outputPin:hover {
-      border-radius: 100%;
-      background-color: var(--light-grey);
-      color: var(--dark-app-blue);
-    }
+  .outputPin {
+    background: none;
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: var(--grey);
+    border: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+  }
+
+  .outputPin:hover {
+    border-radius: 100%;
+    background-color: var(--light-grey);
+    color: var(--dark-app-blue);
+  }
 }
 
 #outputDiv {
-  // background-color: red;
   height: auto;
   max-width: 80vmin;
   display: flex;
   flex-wrap: wrap;
+  justify-content: first baseline;
   gap: 1rem;
   color: var(--dark-app-blue);
 
-.created-div {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 3px;
-  display: flex;
-  text-align: left;
-  height: fit-content;
-  max-width: calc(20rem + 1rem)
-}
+  #created-div {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 3px;
+    display: flex;
+    text-align: left;
+    height: fit-content;
+    max-width: calc(20rem + 1rem);
 
-.created-div:hover {
-  background-color: var(--grey);
-  color: white;
-}
+    .created-div-functions {
+      background: none;
+      display: flex;
+      border: none;
+      height: fit-content;
+    }
 
-#outputDiv::first-letter {
-  text-transform: capitalize;
-}
-}
+    .removeNote {
+      margin: 0.25rem;
+      font-size: 1.5rem;
+      color: var(--grey);
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+    }
+  }
 
+  #created-div:hover {
+    .removeNote {
+      opacity: 1;
+      border-radius: 100%;
+      color: var(--light-grey);
+    }
 
+    .removeNote:hover {
+      border-radius: 100%;
+      color: var(--grey);
+    }
+  }
+
+  .created-div:hover {
+    background-color: var(--highlight-matte-navy);
+    color: white;
+  }
+
+  #outputDiv::first-letter {
+    text-transform: capitalize;
+  }
+}

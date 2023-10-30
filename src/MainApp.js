@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { RiPushpin2Line } from 'react-icons/ri';
+import React, { useState, useRef } from "react";
+import { RiPushpin2Line } from "react-icons/ri";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 // ! Style sheets
 import "./styles/Global/App.css";
@@ -27,6 +28,13 @@ function MainApp() {
     }
   };
 
+  const removeFunction = () => {
+    const element = document.getElementById("created-div");
+    if (element) {
+      element.remove();
+    }
+  };
+
   return (
     <div className="App">
       <div className="App-header-content">
@@ -41,11 +49,15 @@ function MainApp() {
           <RiPushpin2Line />
         </button>
       </div>
-      
+
       <div id="outputDiv">
         {createdDivs.map((text, index) => (
-          <div key={index} className="created-div">
+          <div key={index} id="created-div">
             {text}
+
+            <button className="created-div-functions" onClick={removeFunction}>
+              <AiFillCloseCircle className="removeNote" />
+            </button>
           </div>
         ))}
       </div>
