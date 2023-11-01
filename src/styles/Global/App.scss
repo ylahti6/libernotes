@@ -98,6 +98,7 @@ a:hover {
   background-color: white;
   margin: 5rem 0;
   align-items: center;
+  transition: 0.3s;
 
   #inputText {
     border-radius: 6px;
@@ -141,8 +142,9 @@ a:hover {
   justify-content: first baseline;
   gap: 1rem;
   color: var(--dark-app-blue);
+ 
 
-  #created-div {
+.created-div {
     background-color: white;
     padding: 1rem;
     border-radius: 3px;
@@ -152,40 +154,59 @@ a:hover {
     max-width: calc(20rem + 1rem);
 
     .created-div-functions {
+      // background-color: red;
+      min-height: 100%;
+      min-width: 50px;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+    }
+
+    .created-div-remove {
       background: none;
       display: flex;
       border: none;
       height: fit-content;
     }
 
-    .removeNote {
+    .created-div-remove-icon {
       margin: 0.25rem;
       font-size: 1.5rem;
       color: var(--grey);
       border: none;
       cursor: pointer;
-      opacity: 0;
+      opacity: 0.2;
     }
-  }
 
-  #created-div:hover {
-    .removeNote {
-      opacity: 1;
-      border-radius: 100%;
+    .created-div-date {
+      // background-color: blue;
+      padding: 1rem 0 0 0;
       color: var(--light-grey);
-    }
 
-    .removeNote:hover {
-      border-radius: 100%;
-      color: var(--grey);
+      // Potential styling - vertical writing for date but too hard to read imo.
+      // writing-mode: vertical-rl; /* Vertical right-to-left writing mode */
+      // transform: rotate(180deg); /* Rotate text 180 degrees for vertical display */
+      // white-space: nowrap;
     }
   }
 
   .created-div:hover {
     background-color: var(--highlight-matte-navy);
     color: white;
-  }
-
+    .created-div-date {
+      color: var(--grey);
+    }
+      .button {
+        opacity: 1;
+        border-radius: 100%;
+        color: var(--grey);
+      }
+    }
+    .created-div-remove-icon:hover {
+      border-radius: 100%;
+      color: var(--grey);
+      opacity: 1;
+    }
   #outputDiv::first-letter {
     text-transform: capitalize;
   }

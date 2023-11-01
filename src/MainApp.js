@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { RiPushpin2Line } from "react-icons/ri";
 import { AiFillCloseCircle } from "react-icons/ai";
 
-// ! Style sheets
+// Import any necessary CSS files
 import "./styles/Global/App.css";
 import "./styles/index.css";
 import "./styles/var.css";
@@ -22,17 +22,17 @@ function MainApp() {
 
   const moveText = () => {
     if (inputText.trim()) {
-      // Create a new div and add it to the list of created divs
+      // Create a new div and add it to the list of created divs with a unique key
       setCreatedDivs([...createdDivs, inputText.trim()]);
       setInputText(""); // Clear the input field
     }
   };
 
-  const removeFunction = () => {
-    const element = document.getElementById("created-div");
-    if (element) {
-      element.remove();
-    }
+  const removeFunction = (index) => {
+    // Create a copy of the createdDivs array without the item to remove
+    const updatedDivs = [...createdDivs];
+    updatedDivs.splice(index, 1);
+    setCreatedDivs(updatedDivs);
   };
 
   return (
@@ -52,12 +52,19 @@ function MainApp() {
 
       <div id="outputDiv">
         {createdDivs.map((text, index) => (
-          <div key={index} id="created-div">
-            {text}
-
-            <button className="created-div-functions" onClick={removeFunction}>
-              <AiFillCloseCircle className="removeNote" />
-            </button>
+          <div key={index} className="created-div">
+            <div className="created-div-wrap">
+              {text}
+              {/* displays date when written */}
+              <div className="created-div-date">{new Date().toLocaleString()}</div>
+            </div>
+            
+            {/* displays functions for each note */}
+            <div className="created-div-functions">
+              <button className="created-div-remove" onClick={() => removeFunction(index)}>
+                <AiFillCloseCircle className="created-div-remove-icon" />
+              </button>
+            </div>
           </div>
         ))}
       </div>

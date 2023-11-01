@@ -90,6 +90,7 @@ a:hover {
   background-color: white;
   margin: 5rem 0;
   align-items: center;
+  transition: 0.3s;
 }
 .App-header-content #inputText {
   border-radius: 6px;
@@ -128,7 +129,7 @@ a:hover {
   gap: 1rem;
   color: var(--dark-app-blue);
 }
-#outputDiv #created-div {
+#outputDiv .created-div {
   background-color: white;
   padding: 1rem;
   border-radius: 3px;
@@ -138,33 +139,48 @@ a:hover {
   height: fit-content;
   max-width: 21rem;
 }
-#outputDiv #created-div .created-div-functions {
+#outputDiv .created-div .created-div-functions {
+  min-height: 100%;
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+#outputDiv .created-div .created-div-remove {
   background: none;
   display: flex;
   border: none;
   height: -moz-fit-content;
   height: fit-content;
 }
-#outputDiv #created-div .removeNote {
+#outputDiv .created-div .created-div-remove-icon {
   margin: 0.25rem;
   font-size: 1.5rem;
   color: var(--grey);
   border: none;
   cursor: pointer;
-  opacity: 0;
+  opacity: 0.2;
 }
-#outputDiv #created-div:hover .removeNote {
-  opacity: 1;
-  border-radius: 100%;
+#outputDiv .created-div .created-div-date {
+  padding: 1rem 0 0 0;
   color: var(--light-grey);
-}
-#outputDiv #created-div:hover .removeNote:hover {
-  border-radius: 100%;
-  color: var(--grey);
 }
 #outputDiv .created-div:hover {
   background-color: var(--highlight-matte-navy);
   color: white;
+}
+#outputDiv .created-div:hover .created-div-date {
+  color: var(--grey);
+}
+#outputDiv .created-div:hover .button {
+  opacity: 1;
+  border-radius: 100%;
+  color: var(--grey);
+}
+#outputDiv .created-div-remove-icon:hover {
+  border-radius: 100%;
+  color: var(--grey);
+  opacity: 1;
 }
 #outputDiv #outputDiv::first-letter {
   text-transform: capitalize;
