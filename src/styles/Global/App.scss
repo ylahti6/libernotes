@@ -117,22 +117,37 @@ a:hover {
     outline: none;
   }
 
-  .outputPin {
-    background: none;
-    margin: 1rem;
-    font-size: 1.5rem;
-    color: var(--grey);
-    border: none;
-    padding: 0.25rem 0.5rem;
-    cursor: pointer;
-  }
+  .App-header-content-buttons {
+    display: flex;
+    flex-direction: column;
+    opacity: 0.4;
 
-  .outputPin:hover {
-    border-radius: 100%;
+    .outputPin, .colorPalette {
+      background: none;
+      margin: 1rem;
+      font-size: 1.5rem;
+      color: var(--grey);
+      border: none;
+      cursor: pointer;
+    }
+  
+    .outputPin:hover, .colorPalette:hover {
+      border-radius: 100%;
+      // background-color: var(--light-grey);
+      color: var(--dark-app-blue);
+    }
+  }  
+}
+
+.App-header-content:hover {
+
+  .App-header-content-buttons {
     background-color: var(--light-grey);
-    color: var(--dark-app-blue);
+    border-radius: 5rem;
+   opacity: 1;
   }
 }
+
 
 #outputDiv {
   height: auto;

@@ -44,7 +44,10 @@ export const Login = (props) => {
       <button className="link-btn" onClick={() => props.handlePageChange("mainapp")}>
         Continue as a guest
       </button>
+      
     </div>
+
+    
 
   );
 };

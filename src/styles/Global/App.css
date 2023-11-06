@@ -105,19 +105,28 @@ a:hover {
   color: var(--dark-app-blue);
   outline: none;
 }
-.App-header-content .outputPin {
+.App-header-content .App-header-content-buttons {
+  display: flex;
+  flex-direction: column;
+  opacity: 0.4;
+}
+.App-header-content .App-header-content-buttons .outputPin, .App-header-content .App-header-content-buttons .colorPalette {
   background: none;
   margin: 1rem;
   font-size: 1.5rem;
   color: var(--grey);
   border: none;
-  padding: 0.25rem 0.5rem;
   cursor: pointer;
 }
-.App-header-content .outputPin:hover {
+.App-header-content .App-header-content-buttons .outputPin:hover, .App-header-content .App-header-content-buttons .colorPalette:hover {
   border-radius: 100%;
-  background-color: var(--light-grey);
   color: var(--dark-app-blue);
+}
+
+.App-header-content:hover .App-header-content-buttons {
+  background-color: var(--light-grey);
+  border-radius: 5rem;
+  opacity: 1;
 }
 
 #outputDiv {

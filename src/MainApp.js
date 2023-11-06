@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RiPushpin2Line } from "react-icons/ri";
+import { BiPalette } from "react-icons/bi";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 // Import any necessary CSS files
@@ -45,9 +46,16 @@ function MainApp() {
           onChange={handleInputChange}
           onInput={(e) => autoResize(e.target)} // Call autoResize on input
         ></textarea>
-        <button className="outputPin" onClick={moveText}>
-          <RiPushpin2Line />
-        </button>
+
+        <div className="App-header-content-buttons">
+          <button className="outputPin" onClick={moveText}>
+            <RiPushpin2Line />
+          </button>
+
+          <button className="colorPalette" >
+            <BiPalette />
+          </button>
+        </div>
       </div>
 
       <div id="outputDiv">
